@@ -1,0 +1,767 @@
+JAVA  ASSIGNMENTS
+________________________________
+22-NOV-21
+__________________________________
+
+
+HW  ------------------
+  0. Try Serializable code done in class
+ 
+	1. Write 2 threads using extends Thread 
+		a. Thread1   calculates the square of each number starting from 1 ,  displays the square and sleeps for 2sec it continues till 50
+		b. Thread 2 calculates the factorial of of each number starting from 1 ,  displays the square and sleeps for 2sec it continues till 15
+	Create threads in main, give name to each thread print the name 
+	
+	2. Write 2 threads using Runnable
+		a. Thread1  prints the table of  each number starting from 1 ,  displays the square and sleeps for 2sec it continues till 50   in  file tables.txt ( PrintWriter )
+		b. Thread 2 accepts a number from the user and shows the star triangle
+			User enters 3 
+			1
+			1 2
+			1 2 3
+	         do this for  5 times .
+		Give a name to each thread and print it 
+_____________________________________________________________________________________
+
+________________________________
+20-NOV-21
+__________________________________
+
+
+    0.  Try out the codes done in class 
+	
+   1. Write a class Palette   study.collections
+		Property -  TreeSet of Strings ----colors
+
+		 class Palette
+		{
+			Private TreeSet<String>  colors;
+			
+			2 constructors
+			Getters setters
+			toString
+			
+			addToPalette ( String color )  --- this should add the color in lowercase to the TreeSet
+			
+			 showAllColorsInPallete()
+			{
+				//traverse the TreeSet using Iterator
+				// traverse the TreeSet using stream forEach
+			}
+			
+			removeFromPalette(String color)
+			
+			boolean isColorInPalette( String color )
+			
+		}
+		
+		User 
+			Main
+				Create a Palette
+				   perform different operations on it  ( switch case quit MAY be used )
+				
+________________________________
+	2. Write a class  Login
+		Main
+			HashMap<String,String>    users 
+			   populate the uname and password key values ( at least have 5 entry )( u may take values from user ) 
+			
+			
+			Ask the user to login 
+			   ask the user to enter uname 
+				Ask the user to enter password
+				
+			If uname is correct and pwd is wrong print wrong pwd
+			If uname is wrong print wrong user
+			If both are correct print welcome username 
+			
+			
+			Ask user to change password
+				Set the new password
+				    show all unames and password
+				
+FILE IO ASSIGNMENTS 
+
+	1. Write a program to accept names of cities from user till user says quit 
+		Append the name in a text file cities.txt
+	2. Write a program to read all names from the cities.txt
+		a. Show the count of cities
+		b. Show all cities in sorted order !!!  Use ArrayList + Collections.sort   OR  use TreeSet 
+	3. Write a class Book in study.io
+		a. Name, author name, cost, date of publication --- MyDate3
+	4. Write a class SerializeBook
+		a. Main
+			i. Create 5 Book objects and write them to a file  books.bingo
+	5. Write a class DeserializeBook
+		a. Main
+			i. Read all books from books.bingo and show name and cost of each book also show publication year
+
+________________________________
+19-NOV-21
+__________________________________
+1.						
+HW ---- Modify yesterdays assignment for LinkedList, Stack, Vector 
+
+2. 					
+	HW -----------Try out the Iterator and Enumeration example done in class ( play with code  )
+
+3. HW ----  Write a class Invoice 
+			MyDate3  dateOfInvoice
+			  double amount 
+			  String invoiceGivenBy
+			  String  invoiceGivenTo
+	
+	Create a List of Invoices  in User
+		Show a menu to user
+			Switch case
+				1. Show invoice sorted by dateOfInvoice  (  default/natural ordering )  --- show using Iterator
+				2. Show sorted by amount in  descending order   ---show for normal for loop
+				3. Sorted on invoiceGivenBy  --- show using for(Invoice v : invoices )
+				4. Sorted on invoiceGivenTo --- show by Enumeration
+				5.  Show the Invoice details of invoice with max amount  ( Collections.max )
+				6. Show the Invoice details of invoice with latest date ( Collections.max ) 
+			   7 .    quit
+
+
+________________________________
+18-NOV-21
+__________________________________
+1. Play with the TestFinally1 and 2  classes written during session!!!
+		Observe the conditions --
+			1. If no exception occur
+			2. If exception occurs and it is handled
+			3. If exception occurs and it is not handled  (  crash situation )
+
+2.HW ---  Play with TestExceptionChaining code done  in class !!!
+3.
+QUESTION---
+
+		WHEN you are overriding a method that throws any exception 
+			While overriding can you change the throws part in the subclass
+							Then can you make it broader(super class) or narrower(subclass)!!!  
+							
+		Class A
+		{
+			Void f1() throws IOExeption
+			{
+			}
+		}
+		
+		
+		Class B  extends A
+		{
+			@Override
+			 void f1()   throws Exception  ???  VALID HAI  ????
+			{
+			}
+			
+			OR
+			@Override
+			 void f1()   throws FileNotFoundException  ???  VALID HAI  ????
+			{
+			}
+			OR
+			
+			@Override
+			 void f1()   VALID HAI  ????
+			{
+			}
+			OR
+			@Override
+			 void f1()   throws NumberFormatException  ???  VALID HAI  ????
+			{
+			}
+			
+			OR
+			@Override
+			 void f1()   throws IOException  ???  VALID HAI  ????
+			{
+			}
+			
+		}
+
+
+4.   Try Out the Iwork, Iplay example done in class .
+
+5.  Try out the GenericStack Example done in class with User
+
+6. 
+	Write a class ArrayListExample
+		Main
+		Switch case -
+			Call populatelist
+			Call showlist
+			 call sum
+			Call remove element
+		
+		Public static void showList(List<Integer"  list)
+		{
+			 show all elements in the list
+		}
+				
+		Public static int sumAll(List<Integer>  list) 
+		{
+			Calculate sum of all integers in the list
+		}
+			
+			
+		Public static void populateList(List<Integer> list )
+		{
+			Ask user whether to insert or append
+				1. Insert   ---- ask index and value   and call   add(index,value)
+				2. Append  --- call  add(value)
+			Go on asking till user enters "no"
+		}
+			
+		Public static void removeElement(List<Integer> list)
+		{
+			Ask user whether to remove by index or by value
+				1. Index    remove(index)
+				2. Value   remove(value )
+		}
+			
+
+
+________________________________
+17-NOV-21
+__________________________________
+
+
+	HW1 ---  PLAY with the GC code done in the class
+			1. Use array  --- observe that GC is not able to free a single object , so program crashes
+			2. Use local scope reference  --- observe that when heap starts filling jvm runs gc, gc frees unreachable objects and calls finalize
+			3. Use few objects in loop and see that gc is never called by JVM
+			4. Use System.gc() to explicitly call gc
+		
+
+
+
+	2. Try the CrashingProgram and All the Handling programs by typing on your machine
+	3. Write a class TestCommandLine Class  in study.exceptions package
+		1. Show the first string passed in command line in uppercase
+		2. Show the square of number passed as second command line argument
+
+		Observe  program crash when user does not give any command line input 
+		Observer program crash if user does not give a number in second command line argument 
+		
+		Handle the exceptions and Prevent crashing 
+		You may write different try catch for first string processing  and second number processing 
+
+4. Write Custom Exceptions WrongDayException and WrongMonthException as discussed in class
+  
+    Write the MyDate class in study.exception.MyDate2 
+	Property --- day, month,year
+		2 constructors, getter setter toString
+		
+		In the parameter constructor
+			If day is not in range throw new WrongDayException
+			If month is not in range throw new WrongMonthException
+			
+		Same for setDay , setMonth   methods
+		
+	Write a user class in same package
+			Main
+				Create date object with correct values , incorrect values
+						Set day and month with correct and incorrect values
+						Observe exceptions
+						Handle exceptions
+
+
+
+
+
+________________________________
+16-NOV-21
+__________________________________
+
+HW1 ----
+
+	Class  Shop  ---- User of Product hierarchy
+		Main
+		   ---- create an array of Product 
+				Product[] shopping = new Product[4];
+					Shopping[0] = new Toy("doll", "non-battery", 300);
+					Shopping[1] = new Toy("car" ,"battery" ,200);
+					Shopping[2] = new Dress("sherwani","blue","L", 2000);
+					….
+			
+		  --- ask the user which products should be added in the array 
+		  ---  call showBill pass the Product[]
+		
+		
+	    public static void showBill ( Product[] arr)
+	    {
+		Call the getFinalCost method of each product 
+		Make the total  and show the desc of each product and the individual cost
+		And show total 
+	    }
+
+
+
+   Product
+	Write two abstract methods getDesc and getFinalCost
+
+
+  Initially write following subclasses
+	Toy 
+	      name, category-battery/nonbattery , cost
+	
+	
+	Dress  
+		Name, material , size , price 
+
+
+HW2
+	Write an interface  Sellable
+		 getSellingPrice() 
+		 setDiscount(double )
+		
+		
+	Class  CD implements Sellable
+	{
+			Name,  music/video  , cost , duration , artist  ( properties , 2 constructors, getters, setters, toString )
+	}
+	
+	
+	Class  Laptop implements Sellable
+	{
+		Brand, RAM, HDD, CPU-type , Cost
+	}
+	
+	
+Class User
+	Main
+	    create 3/4Sellable objects show details ( toString) 
+		Show the sellingprice of each Sellable object 
+	
+
+
+________________________________
+15-NOV-21
+__________________________________
+
+HW1   -  Override toString of   following classes and check if that toString is called at runtime .
+		1. Circle 
+		2. Point
+		3. Book
+		4. MyDate
+		5. Product
+		6. Person
+		7. Student
+		8. Employee
+		9. Patient
+		10. InternshipStudent 
+	
+Class TestToString
+		Main
+			//pass all 10 objects of above classes  one by one to check()  and observe that toString of runtime type is called
+		Public void check(Object obj )
+		{
+			Sysout (  obj.toString()  )  
+		}
+
+
+
+
+HW2
+	Override equals method for the following ---------------
+1. Circle  (third)
+2. Point    (second)
+3. Book    ( LAST  )
+4. MyDate    (first)
+5. Product    (fourth)
+6. Person    (fifth)
+7. Student   (sixth )
+8. Employee (seventth
+9. Patient (eighth
+10. InternshipStudent (nineth )
+
+Write a User 
+	Main
+	
+	Public static void checkEqaulity(Object obj1, Object obj2)
+	{
+		
+		
+		If (obj1.equals(obj2) )
+			Sysout  they are equal
+		Else
+		     sysout they are not equal
+		
+	}
+	
+
+
+________________________________
+13-NOV-21
+__________________________________
+
+HW 1 - practice of UPCASTING And DOWNCASTING
+
+Create a Hierarchy  A  B C D E F    as discussed in class
+
+   write  following methods  in the TestUpCastingDowncasting class  along with main 
+	Public static void show(A obj)       // call this method in all possible ways 
+		Call methods fa to ff  // use direct call or downcasting as  required
+		
+		
+	SIMILARLY   write  show1(B obj)       ,  show2(C  obj )  , show3( D  obj)  , show4(E  obj )   show5(F obj )
+	
+__________________________________________________________________________________________________
+
+
+HW2 ---  practice for DOWNCASTING and instanceof 
+
+	Modify ObjectExample ---- the signature of func1 is  public static void func1(Object obj )
+		Pass different objects to func1()  
+			Try calling the methods of these classes using downcasting
+			At least pass 4 different class objects to func1() 
+			1. Pass a String object to func1
+				1) Print the string in uppercase inside func1()
+			2. Pass Scanner object to func1
+				1) Call the nextLine method of scanner inside func1
+		
+		    3.    Pass the Circle object to func1()
+				Show the radius of the circle inside func1
+			
+		    4.   Pass the Employee object to func1()
+				Show the salary of empolyee inside func1()
+				
+_________________________________________________________________________________________ 
+		
+
+________________________________
+12-NOV-21
+__________________________________
+	Create a hierarchy 
+		Person (name,dob)
+			Student isa Person  ( rollnumber)
+		                       IntershipStudent  isa   Student ( stipend)
+			Employee isa  Person    (  eid , dept, salary )
+			Patient  isa  Person ( String disesaseDesc )
+		  
+	Each class will have 2 constructors  (   parameter and no-parameter --- please put a sysout as done in class )
+	Each class should have getters and setters for their own properties 
+	
+	
+	User1.java
+		Create Student object with no parameter constructor , set all properties using setter and print them
+		
+	User 2 .java
+		Create InternShipStudent object with parameter constructor  , print the details
+		
+	User3.java
+	        Create an array of Patients 
+			Accept values from user  
+			Print the patient name , disease desc
+			
+			Print all the names of patients who are children --less than18
+			
+	User4.java
+		Create Employee object using first no-parameter constructor and setters  } print details
+		Create Employee object using parameter constructor  } print details
+		
+Draw memory diagrams for each user !!!!
+
+
+__________________________________
+11-NOV-21
+__________________________________
+
+
+Assignment  --- All classes should have 2 constructors , getters and setters 
+			All classes must be in package study.hasarelation
+	1. Write the Circle and Point example done in class .  Populate the array from user.
+		1. Show only radius of all circles in the array 
+		2. Show the centers and radii of all circles whose y coordinate is between 10 and 90
+		3. Show only y coordinates of all circles
+
+		
+   2.  Write a class Book - 
+				Properties - bookname, cost, String[] authors 
+				Write 2 constructors , getters and setters 
+				In the UserOfBook class  - create array few books 
+				1. Show all books having single author
+				2. Show all books -  bookname and cost
+				3. Show total cost of all books In the array
+				4. Show only bookname  author1,author2, author…………   for all books
+			
+   3.  Write a class Product  
+			Properties -  productName, desc, cost , dateOfExpiry
+			Write a class MyDate  --- properties  day , month, year 
+			
+			UserOfProduct
+				Create array of Products --- populate array ( either hardcode OR  accept values from user )
+				
+				Ask the user which product she wants to purchase and quantity 
+					Check if product is within expiry date 
+						If yes then  ----  calculate the total cost ==  qty * product cost 
+						Show bill
+							Product name desc    qty    cost   total cost 
+							
+					Else
+					    product has crossed expiry date , we cannot sell it 
+
+__________________________________
+10-NOV-21
+__________________________________
+1.	 Write a class WrapperExample
+		a. Write a main method  ----  accept a new password from user
+						     pass that password to a verify(pwd)  , this method returns a boolean
+							If password is valid then returned value is true  , else false
+						     check if password is valid , if yes then say congratulations your password is set
+							Else ask the user to reenter ---Loop for 5 times in case of invalid pwd
+							
+		b. Write a method     boolean  verify(String p )  ( use charAt, length API of String class  , use Character.isDigit, isLetter,isUpperCase,isLowerCase,……..   )
+					Return true only if password satisfies the following condition , else return false
+					1. The password length must be between 8 and 20
+					2. The password must begin with a letter 
+					3. The password must have at least one capital character
+					4. The password must have at least one digit 
+					5. The password must have at least one small character
+					6. The password must have at least one special char ====>>>       _   -  #  $
+				
+
+
+2. package study;
+
+public class TestWrapperClass4 {
+
+	
+	public static void main(String[] args) {
+		
+		//Integer x = 33;
+		MyWrapper y = new MyWrapper();
+		y.value = 33;
+		System.out.println(y.value);
+		increment(y);
+		System.out.println(y.value);
+	}
+	
+	public static void increment(Integer x)
+	{
+		x=x+1; //boxing + autoboxing
+	}
+	
+	public static void increment(MyWrapper y)
+	{
+		y.value = y.value +1;
+	}
+}
+
+
+class MyWrapper
+{
+	int value;
+}
+
+	
+  --- write a swap function that will accept 2 numbers and swap their values 
+	Print before and after  in main 
+	
+	Public static void swap( ……..  V1, …………..v2) 
+	
+	Draw memory diagrams !!!!
+
+
+
+
+3.	Accept a few numbers from the command line
+	Show the sum of those numbers.
+	( concept = command line arguments ,  Integer.parseInt( string) 
+	
+	
+4.	Accept a few strings from command line
+		Show the length of each string and show each string in uppercase .
+		
+
+5.	Accept one command line argument that is an option 1  or 2 or 3
+	If the option is 1  show  table of 2 upto 100
+	If the option is 2 show a poem
+	If the option is 3 show a message to the user
+	If the option is not given or it is other than 1,2,3---- show incorrect option
+
+
+
+__________________________________
+9-NOV-21
+__________________________________
+1. Accept a string from the user 
+		a. Show a menu ( switch -case) - show this in a loop
+			1. Show length of string ( hint = use API  length() )
+			2. Show substring- accept begin and end index from user  ( hint = use API substring )
+			3. Check if string is palindrome (  hint = use API  length(), charAt, concat or +, equals  
+			4. quit
+
+
+2.  create a loop that accepts a name ( firstname surname)  from the user and prints 
+		Welcome  name in title case  
+			User enters   sachiN tenDulkar   ( use API  = split(), substring, toUppercase, toLowercase  )
+			Output   ---------                Welcome Sachin Tendulkar
+			
+		The loop shall continue till user enters quit/ Quit/qUIT /QUIT/quiT  ( Use API = equalsIgnoreCase )
+
+
+
+3.
+	Accept a string from the user .
+	Use StringBuffer class API    reverse ()  , equals     to show whether the string is a palindrome .
+
+
+4.
+Try out the following code -
+public static void main(String[] args) {
+		//String s = "hello";
+		//String s1 = s.concat("world");
+		StringBuffer s = new StringBuffer("hello");
+	    StringBuffer s1 = s.append("world");
+		
+		if(s==s1)
+			System.out.println("they are same");
+		else
+			System.out.println("they are different");
+
+	}
+
+5. 
+		Write a class Calculator with a method add in the package maths.util
+		Write a class User in the study package
+				Write main 
+					Call Calculator.add() first without using import!!
+					Then use import!!
+_________________________________________________________________
+8-NOV-21
+__________________________________________________________________
+	Assignment ---  
+	  Write a class Student_IET
+	  the class has following properties 
+		firstName , lastName , age , graduation_year , graduation_stream 
+		make all the properties as private
+		write accessor and mutator methods for each property
+			- in the setter methods apply following checks
+				firstname, lastname cannot be blank 
+				age must be greater than 18 and less than 80
+				graduation year  should be 4 to 0 years before current year
+				graduation_stream must be between ----  COMPUTER, IT, ELECTRICAL,MECH ,CIVIL ,CHEMICAL,AUTO
+
+	write a User class that will create object of Student_IET  and set properties and show all properties using getters 
+	while using set properties accept value from user and pass to setter.
+
+_______________________________________________________________________________________________
+	Assignment ---- OPEN  javadocs in your browser for String class . observe the constructors of string class
+		Write a class StringTest  
+			write the starting point main
+				create 5 string objects using following 4 constructors from Javadocs 	
+					String(String )
+					String()
+					String(char[] )
+					String(char[] , offset,count )
+
+				print all the strings
+______________________________________________________________________
+	Assignment ----------- write a class StringTest2
+				write the starting point main
+					create 2 strings using literals and 1 string using new
+					compare address of two literal strings when values are same and different
+					compare addresses of one literal and 1 new string when values are same and different
+_____________________________________________________________________________________
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  8-NOV-2021
+   
+  1. 
+	Assignment ---  
+	  Write a class Student_IET
+	  the class has following properties 
+		firstName , lastName , age , graduation_year , graduation_stream 
+		make all the properties as private
+		write accessor and mutator methods for each property
+			- in the setter methods apply following checks
+				firstname, lastname cannot be blank 
+				age must be greater than 18 and less than 80
+				graduation year  should be 4 to 0 years before current year
+				graduation_stream must be between ----  COMPUTER, IT, ELECTRICAL,MECH ,CIVIL ,CHEMICAL,AUTO
+
+	write a User class that will create object of Student_IET  and set properties and show all properties using getters 
+	while using set properties accept value from user and pass to setter.
+
+
+   2.   	Assignment ---- OPEN  javadocs in your browser for String class . observe the constructors of string class
+		Write a class StringTest  
+			write the starting point main
+				create 5 string objects using following 4 constructors from Javadocs 	
+					String(String )
+					String()
+					String(char[] )
+					String(char[] , offset,count )
+
+				print all the strings
+
+
+
+   3.	Assignment ----------- write a class StringTest2
+				write the starting point main
+					create 2 strings using literals and 1 string using new
+					compare address of two literal strings when values are same and different
+					compare addresses of one literal and 1 new string when values are same and different
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
